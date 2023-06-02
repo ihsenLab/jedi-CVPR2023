@@ -13,8 +13,16 @@ Step 3 : If you wish to evaluate the mask accuracy, change the path in line 18 t
 
 Step 4: If you wish to use the autoencoder, change the path in line 24 to file containing the autoencoder, Otherwise ignore this step
 
-The file is setup by default to run on the provided sample images , and the autoencoder for these files can be downloaded [here](https://drive.google.com/file/d/1N3BXaWu85uNJ378_SHkU_HElAIiaCaDr/view?usp=sharing) .
-The patch mask ground truth files for the sample images are provided in the sample_gt.mat files.
+### Autoencoder
+
+We provide pre-trained auto encoders that we used for our experiments:
+
+* Imagenet and Pascal VOC 07: [Auto encoder link](https://drive.google.com/file/d/1N3BXaWu85uNJ378_SHkU_HElAIiaCaDr/view?usp=sharing) . This is the auto encoder to use with the provided sample images. This auto encoder should also function with any 224x224 pixel image
+* CASIA : [Auto encoder link](https://drive.google.com/file/d/1AO4fYILPCQlGO15PrbGV8JS2RgoHXz-X/view?usp=sharing) The image size for this autoencoder is 320x240
+
+**Training your own auto encoder:**
+
+If you wish to train an auto encoder for your own custom data, it is possible to do so via the "autoencoder_train.m" file. The training data (patch_gt) is a matlab structure that contains binary images of patch ground truth data where pixels that form the patch data have the value of 1 (white) and the other image data has a value of 0 (black)
 
 ## Evaluation
 The evaluuation files require Python 3.7 and Pytorch
