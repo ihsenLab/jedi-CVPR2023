@@ -1,5 +1,7 @@
 # Jedi Adversarial Patch Defense
-This is the anonymous repository for: "Jedi: Entropy-based Localization and Removal of Adversarial Patches"
+This is the repository for: "Jedi: Entropy-based Localization and Removal of Adversarial Patches"
+
+![Jedi overview](jedi_overview.JPG)
 
 ## Running Jedi
 
@@ -22,7 +24,9 @@ We provide pre-trained auto encoders that we used for our experiments:
 
 **Training your own auto encoder:**
 
-If you wish to train an auto encoder for your own custom data, it is possible to do so via the "autoencoder_train.m" file. The training data (patch_gt) is a matlab structure that contains binary images of patch ground truth data where pixels that form the patch data have the value of 1 (white) and the other image data has a value of 0 (black)
+If you wish to train an auto encoder for your own custom data, it is possible to do so via the "autoencoder_train.m" file. The training data (patch_gt) is a matlab structure that contains binary images of patch ground truth data where pixels that form the patch data have the value of 1 (white) and the other image data has a value of 0 (black) like the sample shown below
+
+![Patch ground truth sample](patch_gt_sample.JPG)
 
 ## Evaluation
 The evaluuation files require Python 3.7 and Pytorch
